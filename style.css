@@ -1,0 +1,520 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #f4f6f8;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+}
+
+
+/* =========================
+   GERADOR
+========================= */
+
+.gerador {
+    width: 100%;
+
+    background-color: #00264a;
+
+    border: 2px solid #008cff;
+
+    border-radius: 8px;
+
+    padding: 35px;
+
+    color: white;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.20);
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.cabecalho {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+.cadeado {
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+
+.cabecalho h1 {
+    font-size: 28px;
+
+    margin-bottom: 8px;
+}
+
+
+.cabecalho p {
+    color: #b8d4eb;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   ÁREA DA SENHA
+========================= */
+
+.senha-area {
+    display: flex;
+
+    gap: 10px;
+
+    width: 100%;
+
+    margin-bottom: 30px;
+}
+
+
+.campo-senha {
+    flex: 1;
+
+    min-width: 0;
+
+    height: 55px;
+
+    background-color: #001b36;
+
+    border: 2px solid #008cff;
+
+    border-radius: 6px;
+
+    outline: none;
+
+    color: white;
+
+    padding: 0 15px;
+
+    font-size: 18px;
+}
+
+
+.campo-senha::placeholder {
+    color: #8aa8c2;
+}
+
+
+.campo-senha:focus {
+    border-color: #00d9ff;
+
+    box-shadow:
+        0 0 0 2px rgba(0, 217, 255, 0.15);
+}
+
+
+/* =========================
+   BOTÃO COPIAR
+========================= */
+
+.botao-copiar {
+    height: 55px;
+
+    padding: 0 22px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background-color: #008cff;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.botao-copiar:hover {
+    background-color: #006fc9;
+}
+
+
+.botao-copiar:active {
+    transform: scale(0.97);
+}
+
+
+/* =========================
+   PERSONALIZAÇÃO
+========================= */
+
+.personalizar {
+    border: 1px solid #008cff;
+
+    border-radius: 5px;
+
+    padding: 25px;
+}
+
+
+.personalizar h2 {
+    font-size: 21px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   CONFIGURAÇÕES
+========================= */
+
+.configuracoes {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 35px;
+}
+
+
+/* =========================
+   PARÂMETROS
+========================= */
+
+.parametro-senha h3 {
+    font-size: 15px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   CONTROLE DE QUANTIDADE
+========================= */
+
+.controle {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+}
+
+
+.parametro-senha__botao {
+    width: 45px;
+
+    height: 45px;
+
+    background-color: transparent;
+
+    border: 1px solid #008cff;
+
+    color: white;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.parametro-senha__botao:first-child {
+    border-radius: 5px 0 0 5px;
+}
+
+
+.parametro-senha__botao:last-child {
+    border-radius: 0 5px 5px 0;
+}
+
+
+.parametro-senha__botao:hover {
+    background-color: #008cff;
+}
+
+
+.parametro-senha__texto {
+    width: 55px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color: #001b36;
+
+    border-top: 1px solid #008cff;
+
+    border-bottom: 1px solid #008cff;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   CHECKBOXES
+========================= */
+
+.opcao {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 12px;
+
+    color: #d7e7f5;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+
+.opcao input {
+    width: 16px;
+
+    height: 16px;
+
+    cursor: pointer;
+
+    accent-color: #008cff;
+}
+
+
+/* =========================
+   BARRA DE FORÇA
+========================= */
+
+.barra {
+    width: 100%;
+
+    height: 14px;
+
+    background-color: #082d4e;
+
+    border-radius: 3px;
+
+    overflow: hidden;
+
+    margin-bottom: 10px;
+}
+
+
+.nivel-forca {
+    width: 0%;
+
+    height: 100%;
+
+    background-color: #f52f50;
+
+    transition:
+        width 0.3s ease,
+        background-color 0.3s ease;
+}
+
+
+/* =========================
+   LEGENDA
+========================= */
+
+.legenda {
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #a9c5dd;
+
+    font-size: 12px;
+}
+
+
+.texto-forca {
+    text-align: center;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    margin-top: 12px;
+
+    color: #f52f50;
+}
+
+
+/* =========================
+   BOTÃO GERAR
+========================= */
+
+.botao-gerar {
+    display: block;
+
+    margin: 30px auto 0;
+
+    padding: 15px 40px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #1677ff,
+            #00c9e8
+        );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.botao-gerar:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 20px rgba(0, 180, 255, 0.35);
+}
+
+
+.botao-gerar:active {
+    transform: scale(0.98);
+}
+
+
+/* =========================
+   MENSAGEM
+========================= */
+
+.mensagem {
+    min-height: 20px;
+
+    text-align: center;
+
+    margin-top: 15px;
+
+    font-size: 14px;
+
+    color: #65e6ff;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 800px) {
+
+    body {
+        padding: 15px;
+    }
+
+
+    .gerador {
+        padding: 22px;
+    }
+
+
+    .configuracoes {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 500px) {
+
+    .gerador {
+        padding: 18px;
+    }
+
+
+    .cabecalho h1 {
+        font-size: 23px;
+    }
+
+
+    .cabecalho p {
+        font-size: 13px;
+    }
+
+
+    .senha-area {
+        flex-direction: column;
+    }
+
+
+    .campo-senha {
+        width: 100%;
+
+        font-size: 16px;
+    }
+
+
+    .botao-copiar {
+        width: 100%;
+    }
+
+
+    .personalizar {
+        padding: 18px;
+    }
+
+
+    .personalizar h2 {
+        font-size: 18px;
+    }
+
+}
